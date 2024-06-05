@@ -62,6 +62,10 @@ namespace Mango.Web.Controllers
                     return RedirectToAction(nameof(Login));
                 }
             }
+            else
+            {
+                TempData["error"] = result.Message; 
+            }
 
             var roleList = new List<SelectListItem>()
             {
@@ -88,7 +92,11 @@ namespace Mango.Web.Controllers
                     _tokenProvider.SetToken(loginResponseDto.Token);
                     return RedirectToAction("Index", "Home");
                 }
-            
+                else
+                {
+                    TempData["error"] = responseDto.Message;
+                    return View(obj);
+                }
             }
             
             {
