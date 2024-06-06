@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mango.Services.CouponApi", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mango.Web", "Mango.Web\Mango.Web.csproj", "{31BC2464-C782-4793-97AB-D6B987AC2F9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mango.Services.AuthAPI", "Mango.Services.AuthAPI\Mango.Services.AuthAPI.csproj", "{C64D6A4C-B91E-480B-8793-99EB58EEBC16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mango.Services.AuthAPI", "Mango.Services.AuthAPI\Mango.Services.AuthAPI.csproj", "{C64D6A4C-B91E-480B-8793-99EB58EEBC16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mango.Services.ProductAPI", "Mango.Services.ProductAPI\Mango.Services.ProductAPI.csproj", "{8C28E987-059C-4C45-88C9-8EA0F2D9D5CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{C64D6A4C-B91E-480B-8793-99EB58EEBC16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C64D6A4C-B91E-480B-8793-99EB58EEBC16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C64D6A4C-B91E-480B-8793-99EB58EEBC16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C28E987-059C-4C45-88C9-8EA0F2D9D5CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C28E987-059C-4C45-88C9-8EA0F2D9D5CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C28E987-059C-4C45-88C9-8EA0F2D9D5CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C28E987-059C-4C45-88C9-8EA0F2D9D5CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,6 +49,7 @@ Global
 		{7ECA146E-D7C3-4F8B-A444-B4CEEC603495} = {7CC1FACC-0A31-4A83-8764-DBC1C5313FC5}
 		{31BC2464-C782-4793-97AB-D6B987AC2F9E} = {1A901332-97CF-46DC-A81D-51CD404CD963}
 		{C64D6A4C-B91E-480B-8793-99EB58EEBC16} = {7CC1FACC-0A31-4A83-8764-DBC1C5313FC5}
+		{8C28E987-059C-4C45-88C9-8EA0F2D9D5CB} = {7CC1FACC-0A31-4A83-8764-DBC1C5313FC5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BC0C4782-FD64-4281-AE68-5584B31B7E72}

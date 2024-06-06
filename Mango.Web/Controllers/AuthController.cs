@@ -46,7 +46,7 @@ namespace Mango.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(RegistrationRequestDto obj)
         {
-           ResponseDto result = await _authService.RegisterAsync(obj);
+            ResponseDto result = await _authService.RegisterAsync(obj);
             ResponseDto assignRole;
 
             if(result!=null && result.IsSuccess)
@@ -64,7 +64,10 @@ namespace Mango.Web.Controllers
             }
             else
             {
-                TempData["error"] = result.Message; 
+                if (result != null)
+                {
+                    TempData["error"] = result.Message;
+                }
             }
 
             var roleList = new List<SelectListItem>()
@@ -131,8 +134,17 @@ namespace Mango.Web.Controllers
 
                 identity.AddClaim(new Claim(ClaimTypes.Name,
                     jwt.Claims.FirstOrDefault(u => u.Type == JwtRegisteredClaimNames.Email).Value));
-                identity.AddClaim(new Claim(ClaimTypes.Role,
-                    jwt.Claims.FirstOrDefault(u => u.Type == "role").Value));
+                var roleClaim = jwt.Claims.FirstOrDefault(u => u.Type == "role");
+                if (roleClaim != null)
+                {
+                    identity.AddClaim(new Claim(ClaimTypes.Role, roleClaim.Value));
+                }
+                else
+                {
+                    // Handle the case where the role claim is not found
+                    // For example, log a warning or handle it appropriately
+                    Console.WriteLine("Role claim not found in the JWT.");
+                }
 
 
                 var principal = new ClaimsPrincipal(identity);
