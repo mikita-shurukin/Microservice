@@ -27,9 +27,10 @@ namespace Mango.Web.Service
             return await _baseService.SendAsync(new RequestDto()
             {
                 ApiType = SD.ApiType.DELETE,
-                Url = SD.ProductAPIBase + "/api/product" + id
+                Url = SD.ProductAPIBase + "/api/product/" + id
             });
         }
+
 
         public async Task<ResponseDto?> GetAllProductsAsync()
         {
@@ -64,7 +65,7 @@ namespace Mango.Web.Service
             {
                 ApiType = SD.ApiType.PUT,
                 Data = productDto,
-                Url = SD.ProductAPIBase + "/api/product"
+                Url = SD.ProductAPIBase + "/api/product",
             });
         }
     }

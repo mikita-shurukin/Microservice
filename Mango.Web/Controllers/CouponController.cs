@@ -56,7 +56,6 @@ namespace Mango.Web.Controllers
             return View(model);
         }
 
-        [HttpGet]
         public async Task<IActionResult> CouponDelete(int couponId)
         {
             ResponseDto? response = await _couponService.GetCouponByIdAsync(couponId);
